@@ -1,6 +1,6 @@
 # ===================================================================
 # SymSAT: Declarative Symbolic Programming Language & Prover
-# Research Prototype - Giresun University
+# Research Prototype - Karadeniz Technical University
 # ===================================================================
 
 # 1. Declarative Rewrite Rules
