@@ -63,13 +63,11 @@ example:
     diff f wrt x;
     codegen f as java compute(x);
 
-The engine performs congruence closure [@nelson1980fast; @downey1980variations],
+The engine performs congruence closure [@nelson1980fast; @downey1980variations; @nieuwenhuis2005proof],
 commutative canonicalization, in-graph constant folding, and dynamic-programming
 extraction over a cost metric. A seven-example demonstration reproduces 80.0%--92.3% AST
 node reduction relative to the input against the project's local greedy baseline.
 
 # Acknowledgements
 
-The author acknowledges the time and effort of the reviewers.
-
-# References
+The authors acknowledge the time and effort of the reviewers.
