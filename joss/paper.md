@@ -9,7 +9,7 @@ tags:
   - java
 authors:
   - name: Adil Kondiloğlu
-    orcid: 0009-0002-3642-1279
+    orcid: 0000-0002-2729-7532
     affiliation: 1
   - name: Hüseyin Pehlivan
     orcid: 0000-0002-0672-9009
