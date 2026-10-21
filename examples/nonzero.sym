@@ -1,0 +1,15 @@
+# Semboller tanımlı reel değerlerdir; sıfır olmama varsayımı ayrıca gerekir.
+simplify x/x;
+assume x != 0;
+simplify x/x;
+prove x/x == 1;
+let ratio = x/x;
+eval ratio where x=2;
+# Başka bir sembol hakkında varsayım yapılmaz.
+simplify y/y;
+# Sıfır olmamak pozitif olmak değildir: ln(x) alanı hâlâ bilinmiyor.
+simplify 0*ln(x);
+codegen x/x as java ratioFunction(x);
+
+# Bu değerleme reddedilir ve program hata koduyla durur.
+eval ratio where x=0;

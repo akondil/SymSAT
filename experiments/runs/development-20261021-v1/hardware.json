@@ -1,0 +1,7 @@
+{
+  "cpu_model": "AMD Ryzen 9 9900X 12-Core Processor",
+  "logical_cpus": 24,
+  "process_affinity_cpus": 24,
+  "memory_total": "65367304 kB",
+  "scope": "hardware captured after the development run; no CPU pinning or isolation was applied"
+}

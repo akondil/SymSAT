@@ -1,0 +1,330 @@
+options
+{
+  static = false;
+  LOOKAHEAD = 1;
+  UNICODE_INPUT = true;
+}
+
+PARSER_BEGIN(Grammar)
+package lang;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
+import java.math.BigInteger;
+
+public class Grammar {
+  private int parseDepth;
+  private void enterExpression() {
+    if (++parseDepth > 128)
+      throw new SearchLimitException(EGraph.StopReason.INPUT_LIMIT, "Parser nesting limit reached");
+  }
+  private void leaveExpression() { parseDepth--; }
+  private BigInteger integer(String image) {
+    if (image.length() > 20000)
+      throw new SearchLimitException(EGraph.StopReason.INTEGER_LIMIT, "Integer literal too large");
+    BigInteger value = new BigInteger(image);
+    if (value.bitLength() > SearchLimits.defaults().maxIntegerBits)
+      throw new SearchLimitException(EGraph.StopReason.INTEGER_LIMIT, "Integer literal bit limit reached");
+    return value;
+  }
+  private void bind(Map<String, Rational> bindings, String name, Rational value) {
+    if (bindings.putIfAbsent(name, value) != null)
+      throw new IllegalArgumentException("Duplicate evaluation binding: " + name);
+  }
+}
+
+PARSER_END(Grammar)
+
+SKIP :
+{
+  " "
+| "\r"
+| "\t"
+| "\n"
+| <"#" (~["\n","\r"])* ("\n" | "\r" | "\r\n")?>
+| <"//" (~["\n","\r"])* ("\n" | "\r" | "\r\n")?>
+}
+
+TOKEN : /* KEYWORDS */
+{
+   <RULE: "rule">
+ | <LET: "let">
+ | <SIMPLIFY: "simplify">
+ | <DIFF: "diff">
+ | <WRT: "wrt">
+ | <PROVE: "prove">
+ | <CODEGEN: "codegen">
+ | <AS: "as">
+ | <EVAL: "eval">
+ | <WHERE: "where">
+ | <PRINT: "print">
+ | <COST: "cost">
+ | <ASSUME: "assume">
+}
+
+TOKEN : /* OPERATORS & PUNCTUATION */
+{
+   <BIARROW: "<=>">
+ | <ARROW: "=>">
+ | <EQ: "==">
+ | <NE: "!=">
+ | <ASSIGN: "=">
+ | <SEMICOLON: ";">
+ | <COLON: ":">
+ | <COMMA: ",">
+ | <PLUS: "+">
+ | <MINUS: "-">
+ | <MULTIPLY: "*">
+ | <DIVIDE: "/">
+ | <POWER: "^">
+ | <LPAREN: "(">
+ | <RPAREN: ")">
+}
+
+TOKEN : /* LITERALS & IDENTIFIERS */
+{
+   <NUM: (["0"-"9"])+>
+ | <IDENTIFIER: (["a"-"z","A"-"Z","?"]) (["a"-"z","A"-"Z","0"-"9","_"])*>
+}
+
+/* Entry point for full DSL script / program */
+Program parseProgram():
+{
+  List<Stmt> stmts = new ArrayList<Stmt>();
+  Stmt s;
+}
+{
+  ( s=Stmt() { stmts.add(s); } )* <EOF>
+  { return new Program(stmts); }
+}
+
+Stmt Stmt():
+{ Stmt s; }
+{
+    s=RuleStmt() { return s; }
+  | s=AssumeStmt() { return s; }
+  | s=LetStmt() { return s; }
+  | s=SimplifyStmt() { return s; }
+  | s=DiffStmt() { return s; }
+  | s=ProveStmt() { return s; }
+  | s=CodegenStmt() { return s; }
+  | s=EvalStmt() { return s; }
+  | s=PrintStmt() { return s; }
+  | s=ExpStmt() { return s; }
+}
+
+Stmt AssumeStmt():
+{ Token symbol, value; }
+{
+  <ASSUME> symbol=<IDENTIFIER> <NE> value=<NUM> <SEMICOLON>
+  {
+    if (integer(value.image).signum() != 0)
+      throw new IllegalArgumentException("Only assume <symbol> != 0 is supported");
+    return new AssumeStmt(symbol.image);
+  }
+}
+
+Stmt RuleStmt():
+{
+  Token nameTok;
+  Exp left, right;
+  boolean bi = false;
+}
+{
+  <RULE> nameTok=<IDENTIFIER> <COLON> left=Exp()
+  ( <ARROW> { bi = false; } | <BIARROW> { bi = true; } )
+  right=Exp() <SEMICOLON>
+  { return new RuleStmt(nameTok.image, left, right, bi); }
+}
+
+Stmt LetStmt():
+{
+  Token varTok;
+  Exp val;
+}
+{
+  <LET> varTok=<IDENTIFIER> <ASSIGN> val=Exp() <SEMICOLON>
+  { return new LetStmt(varTok.image, val); }
+}
+
+Stmt SimplifyStmt():
+{
+  Exp e;
+  Token costTok = null;
+}
+{
+  <SIMPLIFY> e=Exp() [ <COST> costTok=<IDENTIFIER> ] <SEMICOLON>
+  { return new SimplifyStmt(e, costTok != null ? costTok.image : null); }
+}
+
+Stmt DiffStmt():
+{
+  Exp e;
+  Token varTok;
+}
+{
+  <DIFF> e=Exp() <WRT> varTok=<IDENTIFIER> <SEMICOLON>
+  { return new DiffStmt(e, varTok.image); }
+}
+
+Stmt ProveStmt():
+{
+  Exp a, b;
+}
+{
+  <PROVE> a=Exp() <EQ> b=Exp() <SEMICOLON>
+  { return new ProveStmt(a, b); }
+}
+
+Stmt CodegenStmt():
+{
+  Exp e;
+  Token langTok = null;
+  Token fnTok = null;
+  Token pTok = null;
+  List<String> params = new ArrayList<String>();
+}
+{
+  <CODEGEN> e=Exp()
+  [ <AS> langTok=<IDENTIFIER> ]
+  [ fnTok=<IDENTIFIER> <LPAREN> [ pTok=<IDENTIFIER> { params.add(pTok.image); } ( <COMMA> pTok=<IDENTIFIER> { params.add(pTok.image); } )* ] <RPAREN> ]
+  <SEMICOLON>
+  {
+    String targetLang = langTok != null ? langTok.image : "java";
+    String fnName = fnTok != null ? fnTok.image : "compute";
+    return new CodegenStmt(e, targetLang, fnName, params);
+  }
+}
+
+Stmt EvalStmt():
+{
+  Exp e;
+  Map<String, Rational> bindings = new HashMap<String, Rational>();
+  Token v;
+  Rational value;
+}
+{
+  <EVAL> e=Exp()
+  [
+    <WHERE> v=<IDENTIFIER> <ASSIGN> value=NumericBinding() { bind(bindings, v.image, value); }
+    ( <COMMA> v=<IDENTIFIER> <ASSIGN> value=NumericBinding() { bind(bindings, v.image, value); } )*
+  ]
+  <SEMICOLON>
+  { return new EvalStmt(e, bindings); }
+}
+
+BigInteger SignedInteger():
+{ Token number; boolean negative=false; }
+{
+  [ <MINUS> { negative=true; } | <PLUS> ] number=<NUM>
+  { BigInteger value=integer(number.image); return negative ? value.negate() : value; }
+}
+
+Rational NumericBinding():
+{ BigInteger numerator; BigInteger denominator=BigInteger.ONE; }
+{
+  numerator=SignedInteger() [ <DIVIDE> denominator=SignedInteger() ]
+  { return new Rational(numerator, denominator); }
+}
+
+Stmt PrintStmt():
+{ Exp e; }
+{
+  <PRINT> e=Exp() <SEMICOLON>
+  { return new PrintStmt(e); }
+}
+
+Stmt ExpStmt():
+{ Exp e; }
+{
+  e=Exp() <SEMICOLON>
+  { return new PrintStmt(e); }
+}
+
+/* Entry point for standalone expression parsing */
+Exp parse():
+{ Exp a; }
+{
+  a=Exp() <EOF> { return a; }
+}
+
+Exp Exp():
+{ Exp a; }
+{
+  a=PlusMinus() { return a; }
+}
+
+Exp PlusMinus():
+{ Exp a, b; }
+{
+  a=MultiplyDivide() (
+      <PLUS> b=MultiplyDivide() { a = new Plus(a, b); }
+    | <MINUS> b=MultiplyDivide() { a = new Minus(a, b); }
+  )*
+  { return a; }
+}
+
+Exp MultiplyDivide():
+{ Exp a, b; }
+{
+  a=Unary() (
+      <MULTIPLY> b=Unary() { a = new Multiply(a, b); }
+    | <DIVIDE> b=Unary() { a = new Divide(a, b); }
+  )*
+  { return a; }
+}
+
+Exp Unary():
+{ Exp a; }
+{
+  { enterExpression(); }
+  try {
+
+    <MINUS> a=Unary() { return new UnaryMinus(a); }
+  | <PLUS> a=Unary() { return a; }
+  | a=Power() { return a; }
+
+  } finally { leaveExpression(); }
+}
+
+Exp Power():
+{ Exp a, b; }
+{
+  { enterExpression(); }
+  try {
+
+  a=Primary() (
+    <POWER> b=Power() { return new Power(a, b); }
+  )?
+  { return a; }
+
+  } finally { leaveExpression(); }
+}
+
+Exp Primary():
+{
+  Token t;
+  Exp a;
+  List<Exp> args = new ArrayList<Exp>();
+}
+{
+  { enterExpression(); }
+  try {
+
+    t=<NUM> {
+      return new Const(new Rational(integer(t.image), BigInteger.ONE));
+    }
+  | LOOKAHEAD(2) t=<IDENTIFIER> <LPAREN> [ a=Exp() { args.add(a); } ( <COMMA> a=Exp() { args.add(a); } )* ] <RPAREN> {
+      return new FunctionCall(t.image, args);
+    }
+  | t=<IDENTIFIER> {
+      return new Symbol(t.image);
+    }
+  | <LPAREN> a=Exp() <RPAREN> {
+      return a;
+    }
+
+  } finally { leaveExpression(); }
+}

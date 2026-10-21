@@ -1,0 +1,26 @@
+# ===================================================================
+# SymSAT: Declarative Symbolic Programming Language & Prover
+# Research Prototype - Giresun University
+# ===================================================================
+
+# 1. Declarative Rewrite Rules
+rule my_double_angle: 2 * sin(?t) * cos(?t) <=> sin(2 * ?t);
+rule my_trig_identity: cos(?u)^2 + sin(?u)^2 => 1;
+rule distrib: ?a * (?b + ?c) <=> ?a * ?b + ?a * ?c;
+
+# 2. Automated Formal Equivalence Proofs (E-Graph Congruence Closure)
+prove (sin(x)^2 + cos(x)^2 + 4) == 5;
+prove (x * (y + z)) == (x * y + x * z);
+
+# 3. Variable Scoping & Simplification
+let f = (x * 2) / 2 + sin(x)^2 + cos(x)^2;
+simplify f;
+diff f wrt x;
+
+# 4. Numerical Code Generation (Targeting Java & C for simulations)
+let trajectory = 3 * x^2 + 5 * x + 7;
+codegen trajectory as java computePoly(x);
+codegen (sin(t) * t^2) as c evalTrajectory(t);
+
+# 5. Exact Field Evaluation
+eval (1/3 + 1/6);

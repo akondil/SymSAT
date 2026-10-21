@@ -1,0 +1,210 @@
+{
+  "format": "symsat-corpus-v1",
+  "scope": "34 synthetic development cases; real-valued symbols, only nonzero constant denominators; no held-out or industrial claim",
+  "cases": [
+    {
+      "id": "scaled_cancel-01",
+      "family": "scaled_cancel",
+      "expression": "(x*1)/1",
+      "reference": "x"
+    },
+    {
+      "id": "scaled_cancel-02",
+      "family": "scaled_cancel",
+      "expression": "(x*2)/2",
+      "reference": "x"
+    },
+    {
+      "id": "scaled_cancel-03",
+      "family": "scaled_cancel",
+      "expression": "(x*3)/3",
+      "reference": "x"
+    },
+    {
+      "id": "scaled_cancel-04",
+      "family": "scaled_cancel",
+      "expression": "(x*4)/4",
+      "reference": "x"
+    },
+    {
+      "id": "scaled_cancel-05",
+      "family": "scaled_cancel",
+      "expression": "(x*5)/5",
+      "reference": "x"
+    },
+    {
+      "id": "scaled_cancel-06",
+      "family": "scaled_cancel",
+      "expression": "(x*6)/6",
+      "reference": "x"
+    },
+    {
+      "id": "scaled_cancel-07",
+      "family": "scaled_cancel",
+      "expression": "(x*7)/7",
+      "reference": "x"
+    },
+    {
+      "id": "scaled_cancel-08",
+      "family": "scaled_cancel",
+      "expression": "(x*8)/8",
+      "reference": "x"
+    },
+    {
+      "id": "trigonometric-01",
+      "family": "trigonometric",
+      "expression": "(sin(x)^2+cos(x)^2)*1",
+      "reference": "1"
+    },
+    {
+      "id": "trigonometric-02",
+      "family": "trigonometric",
+      "expression": "(sin(x)^2+cos(x)^2)*2",
+      "reference": "2"
+    },
+    {
+      "id": "trigonometric-03",
+      "family": "trigonometric",
+      "expression": "(sin(x)^2+cos(x)^2)*3",
+      "reference": "3"
+    },
+    {
+      "id": "trigonometric-04",
+      "family": "trigonometric",
+      "expression": "(sin(x)^2+cos(x)^2)*4",
+      "reference": "4"
+    },
+    {
+      "id": "trigonometric-05",
+      "family": "trigonometric",
+      "expression": "(sin(x)^2+cos(x)^2)*5",
+      "reference": "5"
+    },
+    {
+      "id": "trigonometric-06",
+      "family": "trigonometric",
+      "expression": "(sin(x)^2+cos(x)^2)*6",
+      "reference": "6"
+    },
+    {
+      "id": "distribution_identity-01",
+      "family": "distribution_identity",
+      "expression": "x*(y+1)-(x*y+x*1)",
+      "reference": "0"
+    },
+    {
+      "id": "distribution_identity-02",
+      "family": "distribution_identity",
+      "expression": "x*(y+2)-(x*y+x*2)",
+      "reference": "0"
+    },
+    {
+      "id": "distribution_identity-03",
+      "family": "distribution_identity",
+      "expression": "x*(y+3)-(x*y+x*3)",
+      "reference": "0"
+    },
+    {
+      "id": "distribution_identity-04",
+      "family": "distribution_identity",
+      "expression": "x*(y+4)-(x*y+x*4)",
+      "reference": "0"
+    },
+    {
+      "id": "distribution_identity-05",
+      "family": "distribution_identity",
+      "expression": "x*(y+5)-(x*y+x*5)",
+      "reference": "0"
+    },
+    {
+      "id": "distribution_identity-06",
+      "family": "distribution_identity",
+      "expression": "x*(y+6)-(x*y+x*6)",
+      "reference": "0"
+    },
+    {
+      "id": "distribution_identity-07",
+      "family": "distribution_identity",
+      "expression": "x*(y+7)-(x*y+x*7)",
+      "reference": "0"
+    },
+    {
+      "id": "distribution_identity-08",
+      "family": "distribution_identity",
+      "expression": "x*(y+8)-(x*y+x*8)",
+      "reference": "0"
+    },
+    {
+      "id": "nested_cancel-01",
+      "family": "nested_cancel",
+      "expression": "((x*2)/2)/1",
+      "reference": "x"
+    },
+    {
+      "id": "nested_cancel-02",
+      "family": "nested_cancel",
+      "expression": "((x*4)/2)/2",
+      "reference": "x"
+    },
+    {
+      "id": "nested_cancel-03",
+      "family": "nested_cancel",
+      "expression": "((x*6)/2)/3",
+      "reference": "x"
+    },
+    {
+      "id": "nested_cancel-04",
+      "family": "nested_cancel",
+      "expression": "((x*8)/2)/4",
+      "reference": "x"
+    },
+    {
+      "id": "nested_cancel-05",
+      "family": "nested_cancel",
+      "expression": "((x*10)/2)/5",
+      "reference": "x"
+    },
+    {
+      "id": "nested_cancel-06",
+      "family": "nested_cancel",
+      "expression": "((x*12)/2)/6",
+      "reference": "x"
+    },
+    {
+      "id": "binomial_identity-01",
+      "family": "binomial_identity",
+      "expression": "(x+y)^2-(1*x^2*y^0+2*x^1*y^1+1*x^0*y^2)",
+      "reference": "0"
+    },
+    {
+      "id": "binomial_identity-02",
+      "family": "binomial_identity",
+      "expression": "(x+y)^3-(1*x^3*y^0+3*x^2*y^1+3*x^1*y^2+1*x^0*y^3)",
+      "reference": "0"
+    },
+    {
+      "id": "binomial_identity-03",
+      "family": "binomial_identity",
+      "expression": "(x+y)^4-(1*x^4*y^0+4*x^3*y^1+6*x^2*y^2+4*x^1*y^3+1*x^0*y^4)",
+      "reference": "0"
+    },
+    {
+      "id": "binomial_identity-04",
+      "family": "binomial_identity",
+      "expression": "(x+y)^5-(1*x^5*y^0+5*x^4*y^1+10*x^3*y^2+10*x^2*y^3+5*x^1*y^4+1*x^0*y^5)",
+      "reference": "0"
+    },
+    {
+      "id": "application-01",
+      "family": "application",
+      "expression": "(sin(x)+x^2)*(sin(x)+x^2)+(sin(x)+x^2)",
+      "reference": "(sin(x)+x^2)^2+sin(x)+x^2"
+    },
+    {
+      "id": "application-02",
+      "family": "application",
+      "expression": "(x+y)*(a+b)*(c+d)",
+      "reference": "(x+y)*(a+b)*(c+d)"
+    }
+  ]
+}

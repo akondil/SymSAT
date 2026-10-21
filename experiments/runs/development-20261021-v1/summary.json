@@ -1,0 +1,1641 @@
+{
+  "cases": 34,
+  "measured_observations": 714,
+  "correctness_failures": 0,
+  "errors": 0,
+  "warmup_errors": [],
+  "per_case": [
+    {
+      "case": "scaled_cancel-01",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 463621,
+      "q1_ns": 412514.0,
+      "q3_ns": 597055.0,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "scaled_cancel-01",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 1824,
+      "q1_ns": 1768.5,
+      "q3_ns": 1953.5,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "scaled_cancel-01",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 3617,
+      "q1_ns": 3091.0,
+      "q3_ns": 4624.0,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "scaled_cancel-02",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 460967,
+      "q1_ns": 444044.0,
+      "q3_ns": 533183.5,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "scaled_cancel-02",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 2715,
+      "q1_ns": 2660.0,
+      "q3_ns": 2816.0,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        5
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "scaled_cancel-02",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 3216,
+      "q1_ns": 3106.0,
+      "q3_ns": 3687.0,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "scaled_cancel-03",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 408577,
+      "q1_ns": 344620.0,
+      "q3_ns": 436675.0,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "scaled_cancel-03",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 2485,
+      "q1_ns": 2189.0,
+      "q3_ns": 2670.0,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        5
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "scaled_cancel-03",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 2625,
+      "q1_ns": 2234.0,
+      "q3_ns": 3586.5,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "scaled_cancel-04",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 335779,
+      "q1_ns": 315901.0,
+      "q3_ns": 424793.0,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "scaled_cancel-04",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 2495,
+      "q1_ns": 2029.0,
+      "q3_ns": 3206.5,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        5
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "scaled_cancel-04",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 4508,
+      "q1_ns": 3747.0,
+      "q3_ns": 4628.5,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "scaled_cancel-05",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 272578,
+      "q1_ns": 257409.5,
+      "q3_ns": 282993.0,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "scaled_cancel-05",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 2625,
+      "q1_ns": 2475.0,
+      "q3_ns": 2825.0,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        5
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "scaled_cancel-05",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 4098,
+      "q1_ns": 3652.0,
+      "q3_ns": 4578.5,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "scaled_cancel-06",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 222753,
+      "q1_ns": 204709.5,
+      "q3_ns": 235773.0,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "scaled_cancel-06",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 2375,
+      "q1_ns": 2178.5,
+      "q3_ns": 2480.0,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        5
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "scaled_cancel-06",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 3988,
+      "q1_ns": 3607.0,
+      "q3_ns": 4313.5,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "scaled_cancel-07",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 277618,
+      "q1_ns": 253927.5,
+      "q3_ns": 296083.0,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "scaled_cancel-07",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 3296,
+      "q1_ns": 3026.0,
+      "q3_ns": 3597.0,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        5
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "scaled_cancel-07",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 3496,
+      "q1_ns": 3050.5,
+      "q3_ns": 3652.0,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "scaled_cancel-08",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 241920,
+      "q1_ns": 192391.0,
+      "q3_ns": 266051.0,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "scaled_cancel-08",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 2825,
+      "q1_ns": 2335.0,
+      "q3_ns": 3642.0,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        5
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "scaled_cancel-08",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 3336,
+      "q1_ns": 2925.5,
+      "q3_ns": 4017.5,
+      "input_text_nodes": 5,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "trigonometric-01",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 188468,
+      "q1_ns": 156983.0,
+      "q3_ns": 266972.5,
+      "input_text_nodes": 11,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "trigonometric-01",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 9037,
+      "q1_ns": 8561.0,
+      "q3_ns": 9954.0,
+      "input_text_nodes": 11,
+      "output_text_nodes": [
+        9
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "trigonometric-01",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 3971680,
+      "q1_ns": 3903771.0,
+      "q3_ns": 4193507.0,
+      "input_text_nodes": 11,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "trigonometric-02",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 154413,
+      "q1_ns": 147886.0,
+      "q3_ns": 203381.5,
+      "input_text_nodes": 11,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "trigonometric-02",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 9017,
+      "q1_ns": 7844.5,
+      "q3_ns": 10800.0,
+      "input_text_nodes": 11,
+      "output_text_nodes": [
+        11
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "trigonometric-02",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 4463656,
+      "q1_ns": 4262583.5,
+      "q3_ns": 4486869.5,
+      "input_text_nodes": 11,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "trigonometric-03",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 140717,
+      "q1_ns": 138598.5,
+      "q3_ns": 165976.0,
+      "input_text_nodes": 11,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "trigonometric-03",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 11612,
+      "q1_ns": 9769.0,
+      "q3_ns": 12318.5,
+      "input_text_nodes": 11,
+      "output_text_nodes": [
+        11
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "trigonometric-03",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 4272863,
+      "q1_ns": 4227862.0,
+      "q3_ns": 4444013.0,
+      "input_text_nodes": 11,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "trigonometric-04",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 144825,
+      "q1_ns": 123530.0,
+      "q3_ns": 149689.5,
+      "input_text_nodes": 11,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "trigonometric-04",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 9758,
+      "q1_ns": 8877.0,
+      "q3_ns": 11642.5,
+      "input_text_nodes": 11,
+      "output_text_nodes": [
+        11
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "trigonometric-04",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 4476580,
+      "q1_ns": 4425017.0,
+      "q3_ns": 4599484.0,
+      "input_text_nodes": 11,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "trigonometric-05",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 162399,
+      "q1_ns": 134045.0,
+      "q3_ns": 210941.0,
+      "input_text_nodes": 11,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "trigonometric-05",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 12163,
+      "q1_ns": 8486.0,
+      "q3_ns": 17468.5,
+      "input_text_nodes": 11,
+      "output_text_nodes": [
+        11
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "trigonometric-05",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 4273353,
+      "q1_ns": 4226555.0,
+      "q3_ns": 4350896.0,
+      "input_text_nodes": 11,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "trigonometric-06",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 107755,
+      "q1_ns": 105260.0,
+      "q3_ns": 124006.0,
+      "input_text_nodes": 11,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "trigonometric-06",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 8396,
+      "q1_ns": 8156.0,
+      "q3_ns": 10229.5,
+      "input_text_nodes": 11,
+      "output_text_nodes": [
+        11
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "trigonometric-06",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 4267263,
+      "q1_ns": 4202479.5,
+      "q3_ns": 4299464.0,
+      "input_text_nodes": 11,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "distribution_identity-01",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 147039,
+      "q1_ns": 143598.0,
+      "q3_ns": 148968.5,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "distribution_identity-01",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 6963,
+      "q1_ns": 6572.0,
+      "q3_ns": 11111.5,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        11
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "distribution_identity-01",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 955486,
+      "q1_ns": 922920.0,
+      "q3_ns": 975885.5,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "distribution_identity-02",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 133704,
+      "q1_ns": 129100.5,
+      "q3_ns": 149108.5,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "distribution_identity-02",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 5771,
+      "q1_ns": 4688.5,
+      "q3_ns": 8541.0,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        13
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "distribution_identity-02",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 987026,
+      "q1_ns": 945722.5,
+      "q3_ns": 1001879.0,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "distribution_identity-03",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 126731,
+      "q1_ns": 117723.5,
+      "q3_ns": 129591.5,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "distribution_identity-03",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 5490,
+      "q1_ns": 5295.0,
+      "q3_ns": 5790.5,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        13
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "distribution_identity-03",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 1004029,
+      "q1_ns": 957865.5,
+      "q3_ns": 1013521.5,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "distribution_identity-04",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 123054,
+      "q1_ns": 101523.5,
+      "q3_ns": 129516.0,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "distribution_identity-04",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 5220,
+      "q1_ns": 4468.5,
+      "q3_ns": 5475.0,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        13
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "distribution_identity-04",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 995021,
+      "q1_ns": 988203.5,
+      "q3_ns": 1015901.5,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "distribution_identity-05",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 122283,
+      "q1_ns": 114191.5,
+      "q3_ns": 125924.5,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "distribution_identity-05",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 5511,
+      "q1_ns": 5230.0,
+      "q3_ns": 5751.0,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        13
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "distribution_identity-05",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 988880,
+      "q1_ns": 922028.0,
+      "q3_ns": 994631.0,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "distribution_identity-06",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 97395,
+      "q1_ns": 92866.5,
+      "q3_ns": 100501.5,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "distribution_identity-06",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 5140,
+      "q1_ns": 4935.0,
+      "q3_ns": 5816.0,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        13
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "distribution_identity-06",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 1004860,
+      "q1_ns": 1002946.5,
+      "q3_ns": 1025384.5,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "distribution_identity-07",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 99259,
+      "q1_ns": 94570.0,
+      "q3_ns": 103952.0,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "distribution_identity-07",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 5981,
+      "q1_ns": 5130.0,
+      "q3_ns": 6377.0,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        13
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "distribution_identity-07",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 1006122,
+      "q1_ns": 980840.0,
+      "q3_ns": 1015620.5,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "distribution_identity-08",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 92255,
+      "q1_ns": 85222.0,
+      "q3_ns": 95661.0,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "distribution_identity-08",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 5381,
+      "q1_ns": 5169.5,
+      "q3_ns": 5946.5,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        13
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "distribution_identity-08",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 999349,
+      "q1_ns": 982974.0,
+      "q3_ns": 1106398.5,
+      "input_text_nodes": 13,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "nested_cancel-01",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 97595,
+      "q1_ns": 92896.5,
+      "q3_ns": 106452.5,
+      "input_text_nodes": 7,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "nested_cancel-01",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 3697,
+      "q1_ns": 3647.0,
+      "q3_ns": 3917.0,
+      "input_text_nodes": 7,
+      "output_text_nodes": [
+        5
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "nested_cancel-01",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 2635,
+      "q1_ns": 2485.0,
+      "q3_ns": 3251.5,
+      "input_text_nodes": 7,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "nested_cancel-02",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 168641,
+      "q1_ns": 158742.0,
+      "q3_ns": 182962.5,
+      "input_text_nodes": 7,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "nested_cancel-02",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 3427,
+      "q1_ns": 3266.5,
+      "q3_ns": 3677.0,
+      "input_text_nodes": 7,
+      "output_text_nodes": [
+        7
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "nested_cancel-02",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 3226,
+      "q1_ns": 3105.5,
+      "q3_ns": 3431.0,
+      "input_text_nodes": 7,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "nested_cancel-03",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 180353,
+      "q1_ns": 176771.0,
+      "q3_ns": 202154.5,
+      "input_text_nodes": 7,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "nested_cancel-03",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 3867,
+      "q1_ns": 3642.0,
+      "q3_ns": 6698.0,
+      "input_text_nodes": 7,
+      "output_text_nodes": [
+        7
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "nested_cancel-03",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 3006,
+      "q1_ns": 2254.5,
+      "q3_ns": 3371.5,
+      "input_text_nodes": 7,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "nested_cancel-04",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 150315,
+      "q1_ns": 145612.0,
+      "q3_ns": 172508.0,
+      "input_text_nodes": 7,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "nested_cancel-04",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 3527,
+      "q1_ns": 3276.0,
+      "q3_ns": 4253.0,
+      "input_text_nodes": 7,
+      "output_text_nodes": [
+        7
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "nested_cancel-04",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 2975,
+      "q1_ns": 2595.0,
+      "q3_ns": 3246.5,
+      "input_text_nodes": 7,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "nested_cancel-05",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 149845,
+      "q1_ns": 141694.5,
+      "q3_ns": 151442.5,
+      "input_text_nodes": 7,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "nested_cancel-05",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 3176,
+      "q1_ns": 3106.0,
+      "q3_ns": 3391.0,
+      "input_text_nodes": 7,
+      "output_text_nodes": [
+        7
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "nested_cancel-05",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 2896,
+      "q1_ns": 2430.0,
+      "q3_ns": 3111.0,
+      "input_text_nodes": 7,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "nested_cancel-06",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 144354,
+      "q1_ns": 140557.0,
+      "q3_ns": 149785.0,
+      "input_text_nodes": 7,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "COST_LOWER_BOUND"
+      ]
+    },
+    {
+      "case": "nested_cancel-06",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 3176,
+      "q1_ns": 2986.0,
+      "q3_ns": 3231.0,
+      "input_text_nodes": 7,
+      "output_text_nodes": [
+        7
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "nested_cancel-06",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 2826,
+      "q1_ns": 2224.5,
+      "q3_ns": 3181.0,
+      "input_text_nodes": 7,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "binomial_identity-01",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 654274,
+      "q1_ns": 488243.0,
+      "q3_ns": 697025.0,
+      "input_text_nodes": 35,
+      "output_text_nodes": [
+        19
+      ],
+      "stop_reasons": [
+        "FIXED_POINT"
+      ]
+    },
+    {
+      "case": "binomial_identity-01",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 36309,
+      "q1_ns": 34430.5,
+      "q3_ns": 44419.5,
+      "input_text_nodes": 35,
+      "output_text_nodes": [
+        19
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "binomial_identity-01",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 1313748,
+      "q1_ns": 1289191.0,
+      "q3_ns": 1360852.5,
+      "input_text_nodes": 35,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "binomial_identity-02",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 1189401,
+      "q1_ns": 1132734.0,
+      "q3_ns": 1465486.0,
+      "input_text_nodes": 45,
+      "output_text_nodes": [
+        29
+      ],
+      "stop_reasons": [
+        "FIXED_POINT"
+      ]
+    },
+    {
+      "case": "binomial_identity-02",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 43252,
+      "q1_ns": 31986.0,
+      "q3_ns": 54608.5,
+      "input_text_nodes": 45,
+      "output_text_nodes": [
+        29
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "binomial_identity-02",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 1868442,
+      "q1_ns": 1780379.5,
+      "q3_ns": 2146901.5,
+      "input_text_nodes": 45,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "binomial_identity-03",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 3852915,
+      "q1_ns": 3205664.0,
+      "q3_ns": 3990691.5,
+      "input_text_nodes": 55,
+      "output_text_nodes": [
+        39
+      ],
+      "stop_reasons": [
+        "FIXED_POINT"
+      ]
+    },
+    {
+      "case": "binomial_identity-03",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 38783,
+      "q1_ns": 31660.0,
+      "q3_ns": 49910.0,
+      "input_text_nodes": 55,
+      "output_text_nodes": [
+        39
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "binomial_identity-03",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 2098930,
+      "q1_ns": 2039191.5,
+      "q3_ns": 2185269.5,
+      "input_text_nodes": 55,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "binomial_identity-04",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 10111884,
+      "q1_ns": 7860388.0,
+      "q3_ns": 10749790.5,
+      "input_text_nodes": 65,
+      "output_text_nodes": [
+        49
+      ],
+      "stop_reasons": [
+        "FIXED_POINT"
+      ]
+    },
+    {
+      "case": "binomial_identity-04",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 52389,
+      "q1_ns": 43663.0,
+      "q3_ns": 58782.5,
+      "input_text_nodes": 65,
+      "output_text_nodes": [
+        49
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "binomial_identity-04",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 2591236,
+      "q1_ns": 2468288.0,
+      "q3_ns": 2899297.0,
+      "input_text_nodes": 65,
+      "output_text_nodes": [
+        1
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "application-01",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 5492201,
+      "q1_ns": 5411457.5,
+      "q3_ns": 5582973.5,
+      "input_text_nodes": 20,
+      "output_text_nodes": [
+        20
+      ],
+      "stop_reasons": [
+        "FIXED_POINT"
+      ]
+    },
+    {
+      "case": "application-01",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 64482,
+      "q1_ns": 39009.0,
+      "q3_ns": 65745.0,
+      "input_text_nodes": 20,
+      "output_text_nodes": [
+        15
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "application-01",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 11924088,
+      "q1_ns": 11748199.0,
+      "q3_ns": 12118408.0,
+      "input_text_nodes": 20,
+      "output_text_nodes": [
+        15
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "application-02",
+      "engine": "egraph",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 26203766,
+      "q1_ns": 25995229.0,
+      "q3_ns": 28000366.0,
+      "input_text_nodes": 11,
+      "output_text_nodes": [
+        11
+      ],
+      "stop_reasons": [
+        "NODE_LIMIT"
+      ]
+    },
+    {
+      "case": "application-02",
+      "engine": "local_greedy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 6993,
+      "q1_ns": 6277.0,
+      "q3_ns": 6993.5,
+      "input_text_nodes": 11,
+      "output_text_nodes": [
+        11
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    },
+    {
+      "case": "application-02",
+      "engine": "sympy",
+      "successful": 7,
+      "errors": 0,
+      "median_ns": 3928499,
+      "q1_ns": 3783498.0,
+      "q3_ns": 4016551.0,
+      "input_text_nodes": 11,
+      "output_text_nodes": [
+        11
+      ],
+      "stop_reasons": [
+        "NOT_REPORTED"
+      ]
+    }
+  ]
+}

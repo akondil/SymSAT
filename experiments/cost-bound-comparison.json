@@ -1,0 +1,312 @@
+{
+  "format": "symsat-cost-bound-comparison-v1",
+  "scope": "three demonstrations; no comparative speed claim",
+  "rows": [
+    {
+      "metric": "ast_size",
+      "baseline": {
+        "format": "symsat-simplification-v1",
+        "input": "((x * 2) / 2)",
+        "expression": "x",
+        "nonzero_assumptions": [],
+        "cost_metric": "custom",
+        "cost": 1.0,
+        "input_nodes": 5,
+        "output_nodes": 1,
+        "stop_reason": "ITERATION_LIMIT",
+        "saturated": false,
+        "iterations": 10,
+        "cost_lower_bound_reached": false,
+        "eclasses": 30,
+        "enodes": 138,
+        "max_iterations": 10,
+        "node_limit": 5000,
+        "timing_ns": {
+          "insertion": 1796176,
+          "saturation": 27454559,
+          "extraction": 738744,
+          "total": 29989479
+        }
+      },
+      "optimized": {
+        "format": "symsat-simplification-v1",
+        "input": "((x * 2) / 2)",
+        "expression": "x",
+        "nonzero_assumptions": [],
+        "cost_metric": "ast_size",
+        "cost": 1.0,
+        "input_nodes": 5,
+        "output_nodes": 1,
+        "stop_reason": "COST_LOWER_BOUND",
+        "saturated": false,
+        "iterations": 2,
+        "cost_lower_bound_reached": true,
+        "eclasses": 5,
+        "enodes": 9,
+        "max_iterations": 10,
+        "node_limit": 5000,
+        "timing_ns": {
+          "insertion": 92477,
+          "saturation": 368425,
+          "extraction": 48362,
+          "total": 509264
+        }
+      }
+    },
+    {
+      "metric": "operation_cost",
+      "baseline": {
+        "format": "symsat-simplification-v1",
+        "input": "((x * 2) / 2)",
+        "expression": "x",
+        "nonzero_assumptions": [],
+        "cost_metric": "custom",
+        "cost": 0.1,
+        "input_nodes": 5,
+        "output_nodes": 1,
+        "stop_reason": "ITERATION_LIMIT",
+        "saturated": false,
+        "iterations": 10,
+        "cost_lower_bound_reached": false,
+        "eclasses": 30,
+        "enodes": 138,
+        "max_iterations": 10,
+        "node_limit": 5000,
+        "timing_ns": {
+          "insertion": 168292,
+          "saturation": 9000758,
+          "extraction": 412359,
+          "total": 9581409
+        }
+      },
+      "optimized": {
+        "format": "symsat-simplification-v1",
+        "input": "((x * 2) / 2)",
+        "expression": "x",
+        "nonzero_assumptions": [],
+        "cost_metric": "operation_cost",
+        "cost": 0.1,
+        "input_nodes": 5,
+        "output_nodes": 1,
+        "stop_reason": "COST_LOWER_BOUND",
+        "saturated": false,
+        "iterations": 2,
+        "cost_lower_bound_reached": true,
+        "eclasses": 5,
+        "enodes": 9,
+        "max_iterations": 10,
+        "node_limit": 5000,
+        "timing_ns": {
+          "insertion": 15720,
+          "saturation": 165507,
+          "extraction": 31660,
+          "total": 212887
+        }
+      }
+    },
+    {
+      "metric": "ast_size",
+      "baseline": {
+        "format": "symsat-simplification-v1",
+        "input": "(((x * 4) / 2) / 2)",
+        "expression": "x",
+        "nonzero_assumptions": [],
+        "cost_metric": "custom",
+        "cost": 1.0,
+        "input_nodes": 7,
+        "output_nodes": 1,
+        "stop_reason": "ITERATION_LIMIT",
+        "saturated": false,
+        "iterations": 10,
+        "cost_lower_bound_reached": false,
+        "eclasses": 31,
+        "enodes": 137,
+        "max_iterations": 10,
+        "node_limit": 5000,
+        "timing_ns": {
+          "insertion": 81806,
+          "saturation": 7608084,
+          "extraction": 248135,
+          "total": 7938025
+        }
+      },
+      "optimized": {
+        "format": "symsat-simplification-v1",
+        "input": "(((x * 4) / 2) / 2)",
+        "expression": "x",
+        "nonzero_assumptions": [],
+        "cost_metric": "ast_size",
+        "cost": 1.0,
+        "input_nodes": 7,
+        "output_nodes": 1,
+        "stop_reason": "COST_LOWER_BOUND",
+        "saturated": false,
+        "iterations": 3,
+        "cost_lower_bound_reached": true,
+        "eclasses": 8,
+        "enodes": 16,
+        "max_iterations": 10,
+        "node_limit": 5000,
+        "timing_ns": {
+          "insertion": 17474,
+          "saturation": 351412,
+          "extraction": 31781,
+          "total": 400667
+        }
+      }
+    },
+    {
+      "metric": "operation_cost",
+      "baseline": {
+        "format": "symsat-simplification-v1",
+        "input": "(((x * 4) / 2) / 2)",
+        "expression": "x",
+        "nonzero_assumptions": [],
+        "cost_metric": "custom",
+        "cost": 0.1,
+        "input_nodes": 7,
+        "output_nodes": 1,
+        "stop_reason": "ITERATION_LIMIT",
+        "saturated": false,
+        "iterations": 10,
+        "cost_lower_bound_reached": false,
+        "eclasses": 31,
+        "enodes": 137,
+        "max_iterations": 10,
+        "node_limit": 5000,
+        "timing_ns": {
+          "insertion": 15740,
+          "saturation": 7624525,
+          "extraction": 248556,
+          "total": 7888821
+        }
+      },
+      "optimized": {
+        "format": "symsat-simplification-v1",
+        "input": "(((x * 4) / 2) / 2)",
+        "expression": "x",
+        "nonzero_assumptions": [],
+        "cost_metric": "operation_cost",
+        "cost": 0.1,
+        "input_nodes": 7,
+        "output_nodes": 1,
+        "stop_reason": "COST_LOWER_BOUND",
+        "saturated": false,
+        "iterations": 3,
+        "cost_lower_bound_reached": true,
+        "eclasses": 8,
+        "enodes": 16,
+        "max_iterations": 10,
+        "node_limit": 5000,
+        "timing_ns": {
+          "insertion": 21511,
+          "saturation": 238637,
+          "extraction": 23084,
+          "total": 283232
+        }
+      }
+    },
+    {
+      "metric": "ast_size",
+      "baseline": {
+        "format": "symsat-simplification-v1",
+        "input": "(((sin(t) ^ 2) + (cos(t) ^ 2)) * 5)",
+        "expression": "5",
+        "nonzero_assumptions": [],
+        "cost_metric": "custom",
+        "cost": 1.0,
+        "input_nodes": 11,
+        "output_nodes": 1,
+        "stop_reason": "NODE_LIMIT",
+        "saturated": false,
+        "iterations": 6,
+        "cost_lower_bound_reached": false,
+        "eclasses": 1382,
+        "enodes": 4020,
+        "max_iterations": 10,
+        "node_limit": 5000,
+        "timing_ns": {
+          "insertion": 201064,
+          "saturation": 97655069,
+          "extraction": 10530043,
+          "total": 108386176
+        }
+      },
+      "optimized": {
+        "format": "symsat-simplification-v1",
+        "input": "(((sin(t) ^ 2) + (cos(t) ^ 2)) * 5)",
+        "expression": "5",
+        "nonzero_assumptions": [],
+        "cost_metric": "ast_size",
+        "cost": 1.0,
+        "input_nodes": 11,
+        "output_nodes": 1,
+        "stop_reason": "COST_LOWER_BOUND",
+        "saturated": false,
+        "iterations": 1,
+        "cost_lower_bound_reached": true,
+        "eclasses": 10,
+        "enodes": 13,
+        "max_iterations": 10,
+        "node_limit": 5000,
+        "timing_ns": {
+          "insertion": 71547,
+          "saturation": 253214,
+          "extraction": 16472,
+          "total": 341233
+        }
+      }
+    },
+    {
+      "metric": "operation_cost",
+      "baseline": {
+        "format": "symsat-simplification-v1",
+        "input": "(((sin(t) ^ 2) + (cos(t) ^ 2)) * 5)",
+        "expression": "5",
+        "nonzero_assumptions": [],
+        "cost_metric": "custom",
+        "cost": 0.1,
+        "input_nodes": 11,
+        "output_nodes": 1,
+        "stop_reason": "NODE_LIMIT",
+        "saturated": false,
+        "iterations": 6,
+        "cost_lower_bound_reached": false,
+        "eclasses": 1382,
+        "enodes": 4020,
+        "max_iterations": 10,
+        "node_limit": 5000,
+        "timing_ns": {
+          "insertion": 18045,
+          "saturation": 59765778,
+          "extraction": 3201996,
+          "total": 62985819
+        }
+      },
+      "optimized": {
+        "format": "symsat-simplification-v1",
+        "input": "(((sin(t) ^ 2) + (cos(t) ^ 2)) * 5)",
+        "expression": "5",
+        "nonzero_assumptions": [],
+        "cost_metric": "operation_cost",
+        "cost": 0.1,
+        "input_nodes": 11,
+        "output_nodes": 1,
+        "stop_reason": "COST_LOWER_BOUND",
+        "saturated": false,
+        "iterations": 1,
+        "cost_lower_bound_reached": true,
+        "eclasses": 10,
+        "enodes": 13,
+        "max_iterations": 10,
+        "node_limit": 5000,
+        "timing_ns": {
+          "insertion": 46619,
+          "saturation": 207317,
+          "extraction": 72849,
+          "total": 326785
+        }
+      }
+    }
+  ]
+}
