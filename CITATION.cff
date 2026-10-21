@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "SymSAT: A budgeted equality-saturation DSL for symbolic simplification"
+authors:
+  - family-names: Kondiloğlu
+    given-names: Adil
+    orcid: "https://orcid.org/0009-0002-3642-1279"
+    email: 379452@ogr.ktu.edu.tr
+    affiliation: "Karadeniz Technical University, Department of Computer Engineering, Trabzon, Türkiye"
+  - family-names: Pehlivan
+    given-names: Hüseyin
+    orcid: "https://orcid.org/0000-0002-0672-9009"
+    email: pehlivan@ktu.edu.tr
+    affiliation: "Karadeniz Technical University, Department of Computer Engineering, Trabzon, Türkiye"
+version: 1.0.0
+doi: 10.5281/zenodo.23536493
+date-released: 2026-10-21
+license: MIT
+repository-code: "https://github.com/akondil/SymSAT"

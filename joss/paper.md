@@ -11,8 +11,11 @@ authors:
   - name: Adil Kondiloğlu
     orcid: 0009-0002-3642-1279
     affiliation: 1
+  - name: Hüseyin Pehlivan
+    orcid: 0000-0002-0672-9009
+    affiliation: 1
 affiliations:
-  - name: Giresun University, Giresun, Türkiye
+  - name: Karadeniz Technical University, Department of Computer Engineering, Trabzon, Türkiye
     index: 1
 date: 21 October 2026
 bibliography: paper.bib
