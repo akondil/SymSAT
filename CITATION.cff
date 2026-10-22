@@ -7,11 +7,6 @@ authors:
     orcid: "https://orcid.org/0000-0002-2729-7532"
     email: 379452@ogr.ktu.edu.tr
     affiliation: "Karadeniz Technical University, Department of Computer Engineering, Trabzon, Türkiye"
-  - family-names: Pehlivan
-    given-names: Hüseyin
-    orcid: "https://orcid.org/0000-0002-0672-9009"
-    email: pehlivan@ktu.edu.tr
-    affiliation: "Karadeniz Technical University, Department of Computer Engineering, Trabzon, Türkiye"
 version: 1.0.0
 doi: 10.5281/zenodo.23536493
 date-released: 2026-10-21

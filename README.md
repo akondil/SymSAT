@@ -61,7 +61,7 @@ conversion groups.
 
 If you use SymSAT in research, please cite it via `CITATION.cff` or:
 
-Kondiloğlu, A., & Pehlivan, H. (2026). SymSAT: A budgeted equality-saturation DSL for
+Kondiloğlu, A. (2026). SymSAT: A budgeted equality-saturation DSL for
 symbolic simplification (v1.0). Zenodo. https://doi.org/10.5281/zenodo.23536493
 
 ## License
