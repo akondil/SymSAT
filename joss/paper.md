@@ -11,6 +11,9 @@ authors:
   - name: Adil Kondiloğlu
     orcid: 0000-0002-2729-7532
     affiliation: 1
+  - name: Hüseyin Pehlivan
+    orcid: 0000-0002-0672-9009
+    affiliation: 1
 affiliations:
   - name: Karadeniz Technical University, Department of Computer Engineering, Trabzon, Türkiye
     index: 1
